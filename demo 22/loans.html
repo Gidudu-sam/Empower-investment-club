@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Management - Empower Investment Club</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="loans.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="nav-left">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-logo">
+                <i class="fas fa-circle" style="color: var(--gold); margin-right: 0.5rem;"></i>
+                <span>Empower</span>
+            </div>
+        </div>
+        <div class="nav-right">
+            <button class="notification-btn">
+                <i class="fas fa-bell"></i>
+            </button>
+            <div class="system-status">
+                <i class="fas fa-circle" style="color: var(--success-green); font-size: 0.5rem;"></i>
+                <span class="status-text">SYSTEM LIVE</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-content">
+            <div class="sidebar-header">
+                <span class="menu-label">MAIN MENU</span>
+            </div>
+            <nav class="sidebar-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="dashboard.html" class="nav-link">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="savings.html" class="nav-link">
+                            <i class="fas fa-piggy-bank"></i>
+                            <span>Savings</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="loans.html" class="nav-link">
+                            <i class="fas fa-hand-holding-usd"></i>
+                            <span>Loans</span>
+                            <i class="fas fa-chevron-right nav-arrow"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="showComingSoon('Investments')">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Investments</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="showComingSoon('Transactions')">
+                            <i class="fas fa-exchange-alt"></i>
+                            <span>Transactions</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile-sidebar">
+                    <div class="profile-avatar">
+                        <span class="avatar-initials">MK</span>
+                    </div>
+                    <div class="profile-info">
+                        <span class="profile-name">Moses Katumba</span>
+                        <span class="profile-role">GOLD MEMBER</span>
+                    </div>
+                </div>
+                <a href="index.html" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout Securely</span>
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="loans-container">
+            <!-- Loans Header -->
+            <section class="loans-header">
+                <div class="header-content">
+                    <h1 class="page-title">Loan Management</h1>
+                    <p class="page-subtitle">Empowering your personal and business goals with accessible credit.</p>
+                </div>
+                <div class="header-stats">
+                    <div class="header-stat-item">
+                        <span class="stat-label">Available Credit</span>
+                        <span class="stat-value">UGX 2,000,000</span>
+                    </div>
+                    <div class="header-stat-item">
+                        <span class="stat-label">Interest Rate</span>
+                        <span class="stat-value">1.5% Monthly</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Loan Policies Banner -->
+            <section class="policies-banner">
+                <div class="policies-content">
+                    <div class="policies-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Loan Policies & Requirements</h3>
+                    </div>
+                    <div class="policies-grid">
+                        <div class="policy-item">
+                            <i class="fas fa-user-check"></i>
+                            <span>Paid Membership Required</span>
+                        </div>
+                        <div class="policy-item">
+                            <i class="fas fa-ban"></i>
+                            <span>One Active Loan Only</span>
+                        </div>
+                        <div class="policy-item">
+                            <i class="fas fa-clock"></i>
+                            <span>No Overdue Payments</span>
+                        </div>
+                        <div class="policy-item">
+                            <i class="fas fa-users"></i>
+                            <span>Two Guarantors Required</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="eligibility-status" id="eligibilityStatus">
+                    <!-- Eligibility status will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Main Loans Grid -->
+            <div class="loans-grid">
+                <!-- Left Column: Application & Calculator -->
+                <div class="loans-left-column">
+                    <!-- New Application Section -->
+                    <section class="application-section">
+                        <div class="application-card">
+                            <div class="card-header">
+                                <div class="header-icon">
+                                    <i class="fas fa-paper-plane"></i>
+                                </div>
+                                <div class="header-text">
+                                    <h2 class="card-title">New Loan Application</h2>
+                                    <p class="card-subtitle">Apply for a loan with competitive rates</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Application Status Alert -->
+                            <div class="application-status" id="applicationStatus" style="display: none;">
+                                <!-- Status message will be populated by JavaScript -->
+                            </div>
+                            
+                            <form class="loan-form" id="loanForm">
+                                <div class="form-section">
+                                    <h4 class="form-section-title">Loan Details</h4>
+                                    <div class="form-group">
+                                        <label for="loanAmount">Loan Amount (UGX)</label>
+                                        <div class="amount-input-wrapper">
+                                            <input type="text" id="loanAmount" name="loanAmount" placeholder="Enter amount" required>
+                                            <span class="amount-range">Min: 50,000 • Max: 2,000,000</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="loanPeriod">Repayment Period</label>
+                                            <select id="loanPeriod" name="loanPeriod" required>
+                                                <option value="">Select Period</option>
+                                                <option value="3">3 Months</option>
+                                                <option value="6">6 Months</option>
+                                                <option value="12">12 Months</option>
+                                                <option value="18">18 Months</option>
+                                                <option value="24">24 Months</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="loanPurpose">Loan Purpose</label>
+                                            <select id="loanPurpose" name="loanPurpose" required>
+                                                <option value="">Select Purpose</option>
+                                                <option value="business">Business Expansion</option>
+                                                <option value="emergency">Emergency</option>
+                                                <option value="education">Education</option>
+                                                <option value="agriculture">Agriculture</option>
+                                                <option value="personal">Personal Use</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-section">
+                                    <h4 class="form-section-title">Guarantor Information</h4>
+                                    <div class="guarantors-grid">
+                                        <div class="guarantor-card">
+                                            <h5 class="guarantor-title">Guarantor 1</h5>
+                                            <div class="guarantor-inputs">
+                                                <input type="text" id="guarantor1" name="guarantor1" placeholder="Full Name" required>
+                                                <input type="tel" id="guarantor1Phone" name="guarantor1Phone" placeholder="Phone Number" required>
+                                            </div>
+                                        </div>
+                                        <div class="guarantor-card">
+                                            <h5 class="guarantor-title">Guarantor 2</h5>
+                                            <div class="guarantor-inputs">
+                                                <input type="text" id="guarantor2" name="guarantor2" placeholder="Full Name" required>
+                                                <input type="tel" id="guarantor2Phone" name="guarantor2Phone" placeholder="Phone Number" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <button type="submit" class="submit-btn" id="submitBtn">
+                                    <i class="fas fa-check-circle"></i>
+                                    Submit Application
+                                </button>
+                            </form>
+                        </div>
+                    </section>
+
+                    <!-- Live Calculator Section -->
+                    <section class="calculator-section">
+                        <div class="calculator-card">
+                            <div class="card-header">
+                                <div class="header-icon">
+                                    <i class="fas fa-calculator"></i>
+                                </div>
+                                <div class="header-text">
+                                    <h2 class="card-title">Loan Calculator</h2>
+                                    <p class="card-subtitle">Calculate your monthly repayments</p>
+                                </div>
+                            </div>
+                            
+                            <div class="calculator-display">
+                                <div class="repayment-showcase">
+                                    <span class="repayment-label">Monthly Repayment</span>
+                                    <div class="repayment-amount" id="monthlyRepayment">UGX 0</div>
+                                </div>
+                                
+                                <div class="calculation-breakdown">
+                                    <div class="breakdown-item">
+                                        <span class="breakdown-label">Loan Amount</span>
+                                        <span class="breakdown-value" id="calcLoanAmount">UGX 0</span>
+                                    </div>
+                                    <div class="breakdown-item">
+                                        <span class="breakdown-label">Interest Rate</span>
+                                        <span class="breakdown-value">1.5% Monthly</span>
+                                    </div>
+                                    <div class="breakdown-item">
+                                        <span class="breakdown-label">Loan Period</span>
+                                        <span class="breakdown-value" id="calcLoanPeriod">0 months</span>
+                                    </div>
+                                    <div class="breakdown-item">
+                                        <span class="breakdown-label">Total Interest</span>
+                                        <span class="breakdown-value" id="totalInterest">UGX 0</span>
+                                    </div>
+                                    <div class="breakdown-item total">
+                                        <span class="breakdown-label">Total Repayment</span>
+                                        <span class="breakdown-value" id="totalRepayment">UGX 0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Right Column: Loan History -->
+                <div class="loans-right-column">
+                    <section class="loan-history">
+                        <div class="history-card">
+                            <div class="card-header">
+                                <div class="header-icon">
+                                    <i class="fas fa-history"></i>
+                                </div>
+                                <div class="header-text">
+                                    <h2 class="card-title">Loan History</h2>
+                                    <p class="card-subtitle">Track your loan applications and repayments</p>
+                                </div>
+                                <div class="header-actions">
+                                    <select class="filter-select" id="statusFilter">
+                                        <option value="all">All Status</option>
+                                        <option value="active">Active</option>
+                                        <option value="completed">Completed</option>
+                                        <option value="pending">Pending</option>
+                                        <option value="rejected">Rejected</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="history-stats">
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <span class="stat-value">UGX 850,000</span>
+                                        <span class="stat-label">Total Borrowed</span>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <span class="stat-value">1</span>
+                                        <span class="stat-label">Active Loans</span>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div class="stat-content">
+                                        <span class="stat-value">3</span>
+                                        <span class="stat-label">Completed</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="loans-timeline" id="loansList">
+                                <div class="timeline-item active">
+                                    <div class="timeline-marker active"></div>
+                                    <div class="timeline-content">
+                                        <div class="loan-header">
+                                            <h4 class="loan-title">Business Expansion Loan</h4>
+                                            <span class="loan-amount">UGX 500,000</span>
+                                        </div>
+                                        <div class="loan-details">
+                                            <span class="loan-info">12 months • 1.5% monthly</span>
+                                            <span class="loan-date">Applied: Dec 15, 2023</span>
+                                        </div>
+                                        <div class="loan-progress">
+                                            <div class="progress-info">
+                                                <span class="progress-label">Repayment Progress</span>
+                                                <span class="progress-percentage">50% Complete</span>
+                                            </div>
+                                            <div class="progress-bar">
+                                                <div class="progress-fill" style="width: 50%"></div>
+                                            </div>
+                                            <div class="progress-amounts">
+                                                <span class="paid-amount">Paid: UGX 250,000</span>
+                                                <span class="remaining-amount">Remaining: UGX 250,000</span>
+                                            </div>
+                                        </div>
+                                        <span class="status-badge active">Active</span>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item completed">
+                                    <div class="timeline-marker completed"></div>
+                                    <div class="timeline-content">
+                                        <div class="loan-header">
+                                            <h4 class="loan-title">Education Loan</h4>
+                                            <span class="loan-amount">UGX 200,000</span>
+                                        </div>
+                                        <div class="loan-details">
+                                            <span class="loan-info">6 months • 1.5% monthly</span>
+                                            <span class="loan-date">Applied: Aug 10, 2023</span>
+                                        </div>
+                                        <div class="loan-progress">
+                                            <div class="progress-info">
+                                                <span class="progress-label">Fully Repaid</span>
+                                                <span class="progress-percentage">100% Complete</span>
+                                            </div>
+                                            <div class="progress-bar">
+                                                <div class="progress-fill completed" style="width: 100%"></div>
+                                            </div>
+                                        </div>
+                                        <span class="status-badge completed">Completed</span>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item pending">
+                                    <div class="timeline-marker pending"></div>
+                                    <div class="timeline-content">
+                                        <div class="loan-header">
+                                            <h4 class="loan-title">Agriculture Loan</h4>
+                                            <span class="loan-amount">UGX 300,000</span>
+                                        </div>
+                                        <div class="loan-details">
+                                            <span class="loan-info">18 months • 1.5% monthly</span>
+                                            <span class="loan-date">Applied: Jan 20, 2024</span>
+                                        </div>
+                                        <div class="loan-progress">
+                                            <div class="progress-info">
+                                                <span class="progress-label">Under Review</span>
+                                                <span class="progress-percentage">Awaiting Approval</span>
+                                            </div>
+                                        </div>
+                                        <span class="status-badge pending">Under Review</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="loans.js"></script>
+</body>
+</html>

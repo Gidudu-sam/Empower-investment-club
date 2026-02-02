@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savings Center - Empower Investment Club</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="savings.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="nav-left">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-logo">
+                <i class="fas fa-circle" style="color: var(--gold); margin-right: 0.5rem;"></i>
+                <span>Empower</span>
+            </div>
+        </div>
+        <div class="nav-right">
+            <button class="notification-btn">
+                <i class="fas fa-bell"></i>
+            </button>
+            <div class="system-status">
+                <i class="fas fa-circle" style="color: var(--success-green); font-size: 0.5rem;"></i>
+                <span class="status-text">SYSTEM LIVE</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-content">
+            <div class="sidebar-header">
+                <span class="menu-label">MAIN MENU</span>
+            </div>
+            <nav class="sidebar-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="dashboard.html" class="nav-link">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="savings.html" class="nav-link">
+                            <i class="fas fa-piggy-bank"></i>
+                            <span>Savings</span>
+                            <i class="fas fa-chevron-right nav-arrow"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="loans.html" class="nav-link">
+                            <i class="fas fa-hand-holding-usd"></i>
+                            <span>Loans</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="showComingSoon('Investments')">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Investments</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="showComingSoon('Transactions')">
+                            <i class="fas fa-exchange-alt"></i>
+                            <span>Transactions</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile-sidebar">
+                    <div class="profile-avatar">
+                        <span class="avatar-initials">MK</span>
+                    </div>
+                    <div class="profile-info">
+                        <span class="profile-name">Moses Katumba</span>
+                        <span class="profile-role">GOLD MEMBER</span>
+                    </div>
+                </div>
+                <a href="index.html" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout Securely</span>
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="savings-container">
+            <!-- Savings Header -->
+            <section class="savings-header">
+                <div class="header-content">
+                    <h1 class="page-title">Savings Center</h1>
+                    <p class="page-subtitle">Build your future, one weekly installment at a time.</p>
+                </div>
+                <div class="available-savings">
+                    <span class="savings-label">AVAILABLE SAVINGS</span>
+                    <div class="savings-amount">
+                        <span class="currency">UGX</span>
+                        <span class="amount">2,450,000</span>
+                        <i class="fas fa-arrow-up savings-trend"></i>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Main Savings Content -->
+            <div class="savings-content">
+                <!-- Make a Deposit Section -->
+                <section class="deposit-section">
+                    <div class="deposit-card">
+                        <h2 class="section-title">Make a Deposit</h2>
+                        
+                        <form class="deposit-form" id="depositForm">
+                            <div class="form-group">
+                                <label for="depositAmount">AMOUNT TO SAVE (UGX)</label>
+                                <div class="amount-input-container">
+                                    <span class="currency-prefix">UGX</span>
+                                    <input type="number" id="depositAmount" name="depositAmount" placeholder="20,000" min="20000" required>
+                                </div>
+                                <span class="min-requirement">MIN. REQUIREMENT: 20,000</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="proofUpload">PROOF OF PAYMENT</label>
+                                <div class="upload-area" id="uploadArea">
+                                    <div class="upload-content">
+                                        <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                                        <p class="upload-text">Click to upload receipt</p>
+                                        <span class="upload-hint">SCREENSHOT OR PDF (MAX 5MB)</span>
+                                    </div>
+                                    <input type="file" id="proofUpload" name="proofUpload" accept="image/*,.pdf" hidden>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="deposit-btn">
+                                <i class="fas fa-plus-circle"></i>
+                                Submit Deposit
+                            </button>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- How to Pay Section -->
+                <section class="payment-methods">
+                    <div class="payment-card">
+                        <div class="payment-header">
+                            <i class="fas fa-check-circle payment-check"></i>
+                            <h2 class="section-title">How to Pay</h2>
+                        </div>
+                        
+                        <div class="payment-options">
+                            <div class="payment-option bank-option">
+                                <div class="payment-icon">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <div class="payment-details">
+                                    <h3 class="payment-title">Equity Bank</h3>
+                                    <p class="payment-info">Acc: <span class="account-number">1023847561</span></p>
+                                    <p class="payment-name">EMPOWER CLUB LTD</p>
+                                </div>
+                                <button class="copy-btn" data-copy="1023847561">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="payment-option mobile-option">
+                                <div class="payment-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="payment-details">
+                                    <h3 class="payment-title">Mobile Money</h3>
+                                    <p class="payment-info">Merchant: <span class="merchant-code">112233</span></p>
+                                    <p class="payment-name">AIRTEL / MTN ACCEPTED</p>
+                                </div>
+                                <button class="copy-btn" data-copy="112233">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-note">
+                            <i class="fas fa-info-circle"></i>
+                            <p>Always include your member ID in the payment reference for faster processing.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Payment History Section -->
+            <section class="payment-history">
+                <div class="history-header">
+                    <h2 class="section-title">Payment History</h2>
+                    <div class="history-filters">
+                        <select class="filter-select" id="periodFilter">
+                            <option value="all">All Time</option>
+                            <option value="30">Last 30 Days</option>
+                            <option value="90">Last 3 Months</option>
+                            <option value="365">Last Year</option>
+                        </select>
+                        <select class="filter-select" id="statusFilter">
+                            <option value="all">All Status</option>
+                            <option value="completed">Completed</option>
+                            <option value="pending">Pending</option>
+                            <option value="failed">Failed</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="history-card">
+                    <div class="history-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Total Deposits</span>
+                            <span class="stat-value">UGX 2,450,000</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">This Month</span>
+                            <span class="stat-value">UGX 80,000</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Transactions</span>
+                            <span class="stat-value">24</span>
+                        </div>
+                    </div>
+
+                    <div class="transactions-list" id="transactionsList">
+                        <div class="transaction-item completed">
+                            <div class="transaction-icon">
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                            <div class="transaction-details">
+                                <h4 class="transaction-title">Weekly Deposit</h4>
+                                <p class="transaction-method">Mobile Money - MTN</p>
+                                <span class="transaction-date">Jan 15, 2024 • 2:30 PM</span>
+                            </div>
+                            <div class="transaction-amount">
+                                <span class="amount">+UGX 20,000</span>
+                                <span class="status completed">Completed</span>
+                            </div>
+                        </div>
+
+                        <div class="transaction-item completed">
+                            <div class="transaction-icon">
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                            <div class="transaction-details">
+                                <h4 class="transaction-title">Monthly Contribution</h4>
+                                <p class="transaction-method">Equity Bank Transfer</p>
+                                <span class="transaction-date">Jan 8, 2024 • 10:15 AM</span>
+                            </div>
+                            <div class="transaction-amount">
+                                <span class="amount">+UGX 50,000</span>
+                                <span class="status completed">Completed</span>
+                            </div>
+                        </div>
+
+                        <div class="transaction-item pending">
+                            <div class="transaction-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="transaction-details">
+                                <h4 class="transaction-title">Weekly Deposit</h4>
+                                <p class="transaction-method">Mobile Money - Airtel</p>
+                                <span class="transaction-date">Jan 1, 2024 • 4:45 PM</span>
+                            </div>
+                            <div class="transaction-amount">
+                                <span class="amount">+UGX 20,000</span>
+                                <span class="status pending">Pending</span>
+                            </div>
+                        </div>
+
+                        <div class="transaction-item completed">
+                            <div class="transaction-icon">
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                            <div class="transaction-details">
+                                <h4 class="transaction-title">Bonus Deposit</h4>
+                                <p class="transaction-method">Equity Bank Transfer</p>
+                                <span class="transaction-date">Dec 25, 2023 • 9:20 AM</span>
+                            </div>
+                            <div class="transaction-amount">
+                                <span class="amount">+UGX 100,000</span>
+                                <span class="status completed">Completed</span>
+                            </div>
+                        </div>
+
+                        <div class="transaction-item failed">
+                            <div class="transaction-icon">
+                                <i class="fas fa-times"></i>
+                            </div>
+                            <div class="transaction-details">
+                                <h4 class="transaction-title">Weekly Deposit</h4>
+                                <p class="transaction-method">Mobile Money - MTN</p>
+                                <span class="transaction-date">Dec 18, 2023 • 6:10 PM</span>
+                            </div>
+                            <div class="transaction-amount">
+                                <span class="amount">UGX 20,000</span>
+                                <span class="status failed">Failed</span>
+                            </div>
+                        </div>
+
+                        <div class="transaction-item completed">
+                            <div class="transaction-icon">
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                            <div class="transaction-details">
+                                <h4 class="transaction-title">Weekly Deposit</h4>
+                                <p class="transaction-method">Equity Bank Transfer</p>
+                                <span class="transaction-date">Dec 11, 2023 • 11:30 AM</span>
+                            </div>
+                            <div class="transaction-amount">
+                                <span class="amount">+UGX 20,000</span>
+                                <span class="status completed">Completed</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="load-more">
+                        <button class="load-more-btn" id="loadMoreBtn">
+                            <i class="fas fa-chevron-down"></i>
+                            Load More Transactions
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="savings.js"></script>
+</body>
+</html>

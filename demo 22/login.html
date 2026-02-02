@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Portal - Empower Investment Club</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="login.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="./WhatsApp Image 2026-02-02 at 11.40.50 AM.jpeg" alt="Empower Investment Club" class="logo-image">
+                <span>Empower</span>
+            </div>
+            <div class="nav-auth">
+                <a href="./login.html" class="login-btn active">LOGIN</a>
+                <a href="#" class="join-btn">JOIN NOW</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="login-main">
+        <div class="login-container">
+            <!-- Member Portal Card -->
+            <div class="portal-card">
+                <div class="portal-icon">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                
+                <h1 class="portal-title">Member Portal</h1>
+                <p class="portal-subtitle">Access your account securely</p>
+                
+                <form class="login-form" id="loginForm">
+                    <div class="form-group">
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" name="email" placeholder="user@empower.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">PASSWORD</label>
+                        <div class="password-input-container">
+                            <input type="password" id="password" name="password" placeholder="••••••••" required>
+                            <button type="button" class="password-toggle" id="passwordToggle">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="signin-btn">
+                        Sign In Securely
+                    </button>
+                </form>
+                
+                <div class="portal-footer">
+                    <p class="register-link">New to the club? <a href="#" class="register-here">Register Here</a></p>
+                    
+                    <div class="quick-access">
+                        <h4>QUICK ACCESS</h4>
+                        <ul class="access-links">
+                            <li><a href="#"><i class="fas fa-chart-line"></i> Investment Dashboard</a></li>
+                            <li><a href="#"><i class="fas fa-piggy-bank"></i> Savings Overview</a></li>
+                            <li><a href="#"><i class="fas fa-file-alt"></i> Loan Applications</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="logo.svg" alt="Empower Investment Club" class="footer-logo-image">
+                        <span>Empower</span>
+                    </div>
+                    <p class="footer-description">
+                        We are a dedicated group focused on community-driven growth and investment opportunities across Uganda, and we're here to secure your financial future.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-heading">NAVIGATION</h4>
+                        <ul class="footer-list">
+                            <li><a href="index.html" class="footer-link">Our Identity</a></li>
+                            <li><a href="blogs.html" class="footer-link">Club News</a></li>
+                            <li><a href="#" class="footer-link join-trigger">Join The Club</a></li>
+                            <li><a href="contact.html" class="footer-link">Contact Office</a></li>
+                            <li><a href="login.html" class="footer-link">Member Login</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-heading">CLUB OFFICE</h4>
+                        <ul class="footer-list">
+                            <li class="footer-contact">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Plot 45, Kampala Road,<br>
+                                Wandegeya, Kampala
+                            </li>
+                            <li class="footer-contact">
+                                <i class="fas fa-phone"></i>
+                                +256 700 000 000
+                            </li>
+                            <li class="footer-contact">
+                                <i class="fas fa-envelope"></i>
+                                hello@empower.ug
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="login.js"></script>
+    <script src="join.js"></script>
+</body>
+</html>
