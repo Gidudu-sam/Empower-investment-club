@@ -77,6 +77,49 @@ document.querySelectorAll('.cta-button, .secondary-button, .join-btn').forEach(b
     });
 });
 
+// Mobile menu toggle functionality
+const initMobileMenu = () => {
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (mobileToggle && navMenu) {
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('mobile-active');
+            
+            // Toggle hamburger icon
+            const icon = mobileToggle.querySelector('i');
+            if (navMenu.classList.contains('mobile-active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Close mobile menu when clicking on a nav link
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('mobile-active');
+                const icon = mobileToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('mobile-active');
+                const icon = mobileToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    }
+};
+
 // Mobile menu toggle (for future implementation)
 const createMobileMenu = () => {
     const navbar = document.querySelector('.nav-container');
@@ -90,6 +133,7 @@ const createMobileMenu = () => {
 
 // Initialize animations when page loads
 document.addEventListener('DOMContentLoaded', () => {
+    initMobileMenu(); // Initialize mobile menu functionality
     animateStats();
     animateNewsCards();
     
