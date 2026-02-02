@@ -1,0 +1,964 @@
+/* Loans Page Professional Styles */
+
+/* System Status */
+.system-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(16, 185, 129, 0.1);
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.status-text {
+    color: var(--success-green);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Sidebar Enhancements */
+.sidebar-header {
+    padding: 1rem 1.5rem 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 1rem;
+}
+
+.menu-label {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.nav-arrow {
+    margin-left: auto;
+    font-size: 0.7rem;
+    color: var(--gold);
+}
+
+.user-profile-sidebar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 1rem;
+}
+
+.profile-avatar {
+    width: 40px;
+    height: 40px;
+    background: var(--success-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.avatar-initials {
+    color: white;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-name {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.profile-role {
+    color: var(--gold);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Loans Container */
+.loans-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Enhanced Header */
+.loans-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-content h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.header-stats {
+    display: flex;
+    gap: 2rem;
+}
+
+.header-stat-item {
+    text-align: right;
+}
+
+.header-stat-item .stat-label {
+    display: block;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.header-stat-item .stat-value {
+    color: var(--gold);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+/* Policies Banner */
+.policies-banner {
+    background: linear-gradient(135deg, rgba(31, 60, 136, 0.1), rgba(244, 180, 0, 0.05));
+    border: 1px solid rgba(244, 180, 0, 0.2);
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.policies-content {
+    flex: 1;
+}
+
+.policies-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.policies-header i {
+    color: var(--gold);
+    font-size: 1.2rem;
+}
+
+.policies-header h3 {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.policies-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.policy-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.policy-item i {
+    color: var(--gold);
+    font-size: 0.9rem;
+    width: 16px;
+    text-align: center;
+}
+
+.eligibility-status {
+    min-width: 300px;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid;
+    text-align: center;
+}
+
+.eligibility-status.eligible {
+    background: rgba(16, 185, 129, 0.1);
+    border-color: rgba(16, 185, 129, 0.3);
+    color: var(--success-green);
+}
+
+.eligibility-status.ineligible {
+    background: rgba(239, 68, 68, 0.1);
+    border-color: rgba(239, 68, 68, 0.3);
+    color: #ef4444;
+}
+
+.eligibility-status.blocked {
+    background: rgba(245, 158, 11, 0.1);
+    border-color: rgba(245, 158, 11, 0.3);
+    color: #f59e0b;
+}
+
+.eligibility-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.eligibility-message {
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+/* Main Grid Layout */
+.loans-grid {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 2rem;
+}
+
+.loans-left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.loans-right-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Card Headers */
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(244, 180, 0, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.header-icon i {
+    color: var(--gold);
+    font-size: 1.3rem;
+}
+
+.header-text {
+    flex: 1;
+}
+
+.card-title {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.card-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.header-actions {
+    margin-left: auto;
+}
+
+/* Application Section */
+.application-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: fit-content;
+}
+
+.application-status {
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.application-status.blocked {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #ef4444;
+}
+
+.application-status.warning {
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    color: #f59e0b;
+}
+
+/* Form Sections */
+.form-section {
+    margin-bottom: 2rem;
+}
+
+.form-section-title {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.amount-input-wrapper input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.amount-input-wrapper input:focus {
+    outline: none;
+    border-color: var(--gold);
+    background: rgba(244, 180, 0, 0.05);
+    box-shadow: 0 0 0 3px rgba(244, 180, 0, 0.1);
+}
+
+.amount-range {
+    display: block;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-group select {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 2px rgba(244, 180, 0, 0.1);
+}
+
+.form-group select option {
+    background: var(--card-bg);
+    color: white;
+}
+
+/* Guarantors */
+.guarantors-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.guarantor-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.guarantor-title {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.guarantor-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.guarantor-inputs input {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    color: white;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.guarantor-inputs input:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 2px rgba(244, 180, 0, 0.1);
+}
+
+.guarantor-inputs input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--orange), var(--gold));
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(243, 156, 18, 0.3);
+}
+
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Calculator Section */
+.calculator-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: fit-content;
+}
+
+.calculator-display {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.repayment-showcase {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(244, 180, 0, 0.1), rgba(243, 156, 18, 0.05));
+    border: 1px solid rgba(244, 180, 0, 0.2);
+    border-radius: 16px;
+}
+
+.repayment-label {
+    display: block;
+    color: var(--gold);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+}
+
+.repayment-amount {
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.calculation-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.breakdown-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.breakdown-item:last-child {
+    border-bottom: none;
+}
+
+.breakdown-item.total {
+    border-top: 2px solid rgba(244, 180, 0, 0.3);
+    padding-top: 1rem;
+    margin-top: 0.5rem;
+    font-weight: 700;
+}
+
+.breakdown-label {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.breakdown-value {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.breakdown-item.total .breakdown-value {
+    color: var(--gold);
+    font-size: 1rem;
+}
+
+/* History Section */
+.history-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: fit-content;
+}
+
+.filter-select {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    color: white;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 2px rgba(244, 180, 0, 0.1);
+}
+
+/* History Stats */
+.history-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.stat-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(244, 180, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.stat-icon i {
+    color: var(--gold);
+    font-size: 1rem;
+}
+
+.stat-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-value {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.stat-label {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Timeline */
+.loans-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 1rem;
+    position: relative;
+}
+
+.timeline-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 25px;
+    bottom: -24px;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.timeline-marker {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+    border: 3px solid;
+}
+
+.timeline-marker.active {
+    background: var(--success-green);
+    border-color: var(--success-green);
+}
+
+.timeline-marker.completed {
+    background: #3b82f6;
+    border-color: #3b82f6;
+}
+
+.timeline-marker.pending {
+    background: #f59e0b;
+    border-color: #f59e0b;
+}
+
+.timeline-content {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.loan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+}
+
+.loan-title {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.loan-amount {
+    color: var(--gold);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.loan-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.loan-info {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+}
+
+.loan-date {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+}
+
+.loan-progress {
+    margin-bottom: 1rem;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.progress-label {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.progress-percentage {
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--success-green);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+.progress-fill.completed {
+    background: #3b82f6;
+}
+
+.progress-amounts {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+}
+
+.paid-amount {
+    color: var(--success-green);
+    font-weight: 500;
+}
+
+.remaining-amount {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 500;
+}
+
+.status-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+}
+
+.status-badge.active {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--success-green);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.status-badge.completed {
+    background: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.status-badge.pending {
+    background: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .loans-grid {
+        grid-template-columns: 1fr 350px;
+    }
+}
+
+@media (max-width: 968px) {
+    .loans-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .loans-right-column {
+        order: -1;
+    }
+    
+    .policies-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .policies-banner {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.5rem;
+    }
+    
+    .eligibility-status {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .loans-header {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: flex-start;
+    }
+    
+    .header-stats {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .header-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .policies-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .guarantors-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .application-card,
+    .calculator-card,
+    .history-card {
+        padding: 1.5rem;
+    }
+    
+    .repayment-showcase {
+        padding: 1.5rem;
+    }
+    
+    .repayment-amount {
+        font-size: 1.8rem;
+    }
+    
+    .history-stats {
+        gap: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        padding: 1rem;
+    }
+    
+    .loans-header {
+        padding: 1rem 0;
+        margin-bottom: 1.5rem;
+    }
+    
+    .header-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .policies-banner {
+        padding: 1rem 1.5rem;
+    }
+    
+    .application-card,
+    .calculator-card,
+    .history-card {
+        padding: 1rem;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+    }
+    
+    .repayment-amount {
+        font-size: 1.6rem;
+    }
+    
+    .timeline-content {
+        padding: 1rem;
+    }
+}
